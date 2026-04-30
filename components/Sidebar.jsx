@@ -4,10 +4,10 @@ import { Server, Database, Zap, Network, Component } from 'lucide-react'
 import { cn } from './nodes/CustomNodes'
 
 const components = [
-  { type: 'api', label: 'API Server', icon: Server, color: 'text-blue-400', bg: 'bg-blue-500/10 hover:bg-blue-500/20', border: 'border-blue-500/30' },
-  { type: 'db', label: 'Database', icon: Database, color: 'text-green-400', bg: 'bg-green-500/10 hover:bg-green-500/20', border: 'border-green-500/30' },
-  { type: 'cache', label: 'Cache', icon: Zap, color: 'text-red-400', bg: 'bg-red-500/10 hover:bg-red-500/20', border: 'border-red-500/30' },
-  { type: 'lb', label: 'Load Balancer', icon: Network, color: 'text-purple-400', bg: 'bg-purple-500/10 hover:bg-purple-500/20', border: 'border-purple-500/30' },
+  { type: 'api', label: 'API Server', icon: Server, color: 'text-violet-400', bg: 'bg-violet-500/10 hover:bg-violet-500/20', border: 'border-violet-500/30' },
+  { type: 'db', label: 'Database', icon: Database, color: 'text-cyan-400', bg: 'bg-cyan-500/10 hover:bg-cyan-500/20', border: 'border-cyan-500/30' },
+  { type: 'cache', label: 'Cache', icon: Zap, color: 'text-rose-400', bg: 'bg-rose-500/10 hover:bg-rose-500/20', border: 'border-rose-500/30' },
+  { type: 'lb', label: 'Load Balancer', icon: Network, color: 'text-cyan-400', bg: 'bg-cyan-500/10 hover:bg-cyan-500/20', border: 'border-cyan-500/30' },
 ]
 
 export default function Sidebar() {
@@ -19,8 +19,8 @@ export default function Sidebar() {
   return (
     <aside className="w-64 flex flex-col p-4 bg-slate-900/50 backdrop-blur-xl border-r border-slate-800 h-full">
       <div className="flex items-center gap-2 mb-6 text-slate-200">
-        <Component className="w-5 h-5 text-indigo-400" />
-        <h2 className="text-lg font-semibold tracking-wide">Components</h2>
+        <Component className="w-5 h-5 text-violet-400" />
+        <h2 className="text-lg font-semibold tracking-wide bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">Components</h2>
       </div>
       
       <div className="grid gap-3">

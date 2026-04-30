@@ -145,28 +145,28 @@ export default function Dashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#050816] flex items-center justify-center">
+      <div className="min-h-screen bg-[#02040a] flex items-center justify-center">
         <motion.div 
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-          className="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full"
+          className="w-10 h-10 border-4 border-violet-500 border-t-transparent rounded-full"
         />
       </div>
     )
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050816] text-slate-200 font-sans">
+    <div className="flex flex-col min-h-screen bg-[#02040a] text-slate-200 font-sans">
       <Toaster position="top-right" />
       
       {/* Top Navbar */}
       <header className="sticky top-0 z-50 flex justify-between items-center px-6 py-3 bg-slate-900/80 backdrop-blur-xl border-b border-slate-800">
         <div className="flex items-center gap-4">
-          <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <div className="w-10 h-10 bg-gradient-to-br from-violet-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-violet-600/20">
             <Layout className="w-5 h-5 text-white" />
           </div>
           <div>
-            <h1 className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-xl font-bold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
               SysViz
             </h1>
             <p className="text-xs text-slate-400 font-medium">Architecture Designer</p>
@@ -189,7 +189,7 @@ export default function Dashboard() {
           
           <button
             onClick={handleSave}
-            className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-medium transition-colors shadow-lg shadow-indigo-500/20"
+            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 text-white rounded-lg font-medium transition-all shadow-lg shadow-violet-600/20 active:scale-95"
           >
             <Save className="w-4 h-4" />
             <span>Save</span>
@@ -235,7 +235,7 @@ export default function Dashboard() {
         <aside className="w-80 flex flex-col bg-slate-900/50 backdrop-blur-xl border-l border-slate-800 p-4 h-[calc(100vh-65px)] overflow-y-auto">
           <div className="flex items-center justify-between mb-6 mt-2">
             <h2 className="text-lg font-semibold text-slate-200">Your Designs</h2>
-            <span className="text-xs font-medium px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded-full">
+            <span className="text-xs font-medium px-2 py-1 bg-violet-500/20 text-violet-400 rounded-full shadow-[0_0_10px_rgba(139,92,246,0.1)]">
               {designs.length}
             </span>
           </div>
@@ -245,7 +245,7 @@ export default function Dashboard() {
               <div className="text-center p-8 bg-slate-800/30 rounded-2xl border border-slate-800 border-dashed">
                 <Layout className="w-8 h-8 text-slate-500 mx-auto mb-3" />
                 <p className="text-sm text-slate-400">No designs yet.</p>
-                <button onClick={createNewDesign} className="mt-4 text-sm text-indigo-400 hover:text-indigo-300 font-medium">
+                <button onClick={createNewDesign} className="mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-medium">
                   Create your first architecture
                 </button>
               </div>
@@ -261,7 +261,7 @@ export default function Dashboard() {
                     onClick={() => loadDesign(d)}
                     className={`relative p-4 rounded-xl border cursor-pointer transition-all ${
                       currentId === d.id 
-                        ? 'bg-indigo-500/10 border-indigo-500/50 shadow-lg shadow-indigo-500/5' 
+                        ? 'bg-violet-500/10 border-violet-500/50 shadow-lg shadow-violet-500/5' 
                         : 'bg-slate-800/40 border-slate-700/50 hover:bg-slate-800 hover:border-slate-600'
                     }`}
                   >

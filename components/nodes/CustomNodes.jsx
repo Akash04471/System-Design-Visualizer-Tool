@@ -16,9 +16,9 @@ const NodeWrapper = ({ children, title, icon: Icon, colorClass, borderClass, sel
       animate={{ scale: 1, opacity: 1 }}
       className={cn(
         "relative flex flex-col items-center justify-center min-w-[140px] p-3 rounded-xl shadow-lg border-2 transition-all duration-300",
-        "bg-slate-900/80 backdrop-blur-md",
+        "bg-slate-900/80 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.5)]",
         borderClass,
-        selected ? "ring-2 ring-offset-2 ring-offset-slate-950 ring-blue-500 scale-105" : "hover:scale-105"
+        selected ? "ring-2 ring-violet-500 ring-offset-2 ring-offset-[#02040a] scale-105 shadow-[0_0_25px_rgba(139,92,246,0.3)]" : "hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.1)]"
       )}
     >
       <Handle type="target" position={Position.Top} className="w-3 h-3 bg-slate-400 border-2 border-slate-900" />
@@ -34,19 +34,19 @@ const NodeWrapper = ({ children, title, icon: Icon, colorClass, borderClass, sel
 }
 
 export const ApiNode = ({ data, selected }) => (
-  <NodeWrapper title={data.label || 'API Server'} icon={Server} colorClass="bg-blue-500/20 text-blue-400" borderClass="border-blue-500/30" selected={selected} />
+  <NodeWrapper title={data.label || 'API Server'} icon={Server} colorClass="bg-violet-500/20 text-violet-400" borderClass="border-violet-500/30" selected={selected} />
 )
 
 export const DbNode = ({ data, selected }) => (
-  <NodeWrapper title={data.label || 'Database'} icon={Database} colorClass="bg-green-500/20 text-green-400" borderClass="border-green-500/30" selected={selected} />
+  <NodeWrapper title={data.label || 'Database'} icon={Database} colorClass="bg-cyan-500/20 text-cyan-400" borderClass="border-cyan-500/30" selected={selected} />
 )
 
 export const CacheNode = ({ data, selected }) => (
-  <NodeWrapper title={data.label || 'Redis Cache'} icon={Zap} colorClass="bg-red-500/20 text-red-400" borderClass="border-red-500/30" selected={selected} />
+  <NodeWrapper title={data.label || 'Redis Cache'} icon={Zap} colorClass="bg-rose-500/20 text-rose-400" borderClass="border-rose-500/30" selected={selected} />
 )
 
 export const LbNode = ({ data, selected }) => (
-  <NodeWrapper title={data.label || 'Load Balancer'} icon={Network} colorClass="bg-purple-500/20 text-purple-400" borderClass="border-purple-500/30" selected={selected} />
+  <NodeWrapper title={data.label || 'Load Balancer'} icon={Network} colorClass="bg-cyan-500/20 text-cyan-400" borderClass="border-cyan-500/30" selected={selected} />
 )
 
 export const customNodeTypes = {
